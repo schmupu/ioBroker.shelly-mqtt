@@ -1,0 +1,63 @@
+{
+  "common": {
+    "name": "shelly-mqtt",
+    "version": "0.0.1",
+    "title": "Shelly with MQTT",
+    "news": {
+      "0.0.1": {
+        "en": "First version",
+        "de": "Erste Version"
+      }
+    },
+    "titleLang": {
+      "en": "Shelly",
+      "de": "Shelly",
+      "ru": "изобилующий раковинами",
+      "pt": "Shelly",
+      "nl": "schaalachtig",
+      "fr": "Shelly",
+      "it": "Shelly",
+      "es": "Shelly",
+      "pl": "Shelly"
+    },
+    "desc": {
+      "en": "Shelly Adapter",
+      "de": "Shelly Adapter",
+      "ru": "Шестигранный адаптер",
+      "pt": "Adaptador Shelly",
+      "nl": "Shelly-adapter",
+      "fr": "Adaptateur Shelly",
+      "it": "Adattatore Shelly",
+      "es": "Adaptador Shelly",
+      "pl": "Adapter Shelly"
+    },
+    "license": "MIT",
+    "authors": [
+      "Thorsten Stueben <thorsten@stueben.de>"
+    ],
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "messagebox": true,
+    "stopBeforeUpdate": true,
+    "subscribe": "messagebox",
+    "icon": "shelly-mqtt.png",
+    "materialize": true,
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly-mqtt/master/admin/shelly-mqtt.png",
+    "keywords": [
+      "shelly-mqtt"
+    ],
+    "readme": "https://github.com/schmupu/ioBroker.shelly-mqtt/blob/master/README.md",
+    "loglevel": "info",
+    "type": "logic",
+    "restartAdapters": []
+  },
+  "native": {
+    "password": "test",
+    "user": "admin"
+  },
+  "objects": [],
+  "instanceObjects": [
+    {}
+  ]
+}
