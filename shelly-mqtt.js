@@ -1,9 +1,9 @@
 'use strict';
 
-var utils = require(__dirname + '/lib/utils'); // Get common adapter utils
-var dp = require(__dirname + '/lib/datapoints');
-var net = require('net');
-var adapter = new utils.Adapter('shelly-mqtt');
+const utils = require(__dirname + '/lib/utils'); // Get common adapter utils
+let adapter = new utils.Adapter('shelly-mqtt');
+const Server = require(__dirname + '/lib/server');
+let server = null;
 
 function decrypt(key, value) {
   let result = '';
@@ -66,6 +66,12 @@ adapter.on('ready', () => {
 // Main
 // *****************************************************************************************************
 function main() {
+
+  server = new Server(adapter);
+
+  setInterval(() => {
+    if (server) server.onStateChange('shelly-mqtt.0.shellies.shellyswitch-9F5FBB.relay.0.command', 'on');
+  }, 10000);
 
 
 }
