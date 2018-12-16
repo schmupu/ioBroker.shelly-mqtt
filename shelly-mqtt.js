@@ -1,8 +1,13 @@
+/* jshint -W097 */
+/* jshint -W030 */
+/* jshint strict:true */
+/* jslint node: true */
+/* jslint esversion: 6 */
 'use strict';
 
 const utils = require(__dirname + '/lib/utils'); // Get common adapter utils
 let adapter = new utils.Adapter('shelly-mqtt');
-const Server = require(__dirname + '/lib/server');
+const Server = require(__dirname + '/lib/server3');
 let server = null;
 
 function decrypt(key, value) {
@@ -67,11 +72,12 @@ adapter.on('ready', () => {
 // *****************************************************************************************************
 function main() {
 
-  server = new Server(adapter);
+  server = new Server.MQTTServer(adapter);
+  server.listen();
+ 
 
   setInterval(() => {
-    if (server) server.onStateChange('shelly-mqtt.0.shellies.shellyswitch-9F5FBB.relay.0.command', 'on');
+    // if (server) server.onStateChange('shelly-mqtt.0.shellies.shellyswitch-9F5FBB.relay.0.command', 'on');
   }, 10000);
-
 
 }
