@@ -1,5 +1,5 @@
 {
-  "name": "ioBroker.shelly-mqtt",
+  "name": "iobroker.shelly-mqtt",
   "version": "0.0.1",
   "description": "Shelly Deivce wiht MQTT",
   "author": {
@@ -23,6 +23,9 @@
     "url": "https://github.com/schmupu/ioBroker.shelly-mqtt"
   },
   "dependencies": {
+    "@iobroker/adapter-core": "^1.0.3",
+    "@apollon/iobroker-tools": "^0.1.0",
+    "ping": "^0.2.1",
     "node-schedule": "1.3.0",
     "request": "^2.85.0",
     "suncalc": "^1.8.0"

@@ -43,6 +43,7 @@
     "icon": "shelly-mqtt.png",
     "materialize": true,
     "enabled": true,
+    "compact": true,
     "extIcon": "https://raw.githubusercontent.com/schmupu/ioBroker.shelly-mqtt/master/admin/shelly-mqtt.png",
     "keywords": [
       "shelly-mqtt"
@@ -56,7 +57,10 @@
     "bind": "0.0.0.0",
     "port": 1882,
     "password": "mqttuser",
-    "user": "mqttuser"
+    "user": "mqttuser",
+    "http_password": "",
+    "http_username": "admin",
+    "qos": 0
   },
   "objects": [],
   "instanceObjects": [
